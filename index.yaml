@@ -3,12 +3,12 @@ entries:
   php-nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-27T15:38:35.814487-03:00"
+    created: "2020-07-27T17:23:10.604205-03:00"
     description: A Helm chart for Kubernetes
     digest: cff76a55fc3502a2df0256454e78953c93b0c22d96587e067f008c6e4cc06b54
     name: php-nginx
     type: application
     urls:
-    - https://github.com/javierfiorina/helm-repo/php-nginx-0.1.0.tgz
+    - https://javierfiorina.github.io/helm-repo/php-nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2020-07-27T15:38:35.809534-03:00"
+generated: "2020-07-27T17:23:10.603022-03:00"
