@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: {{ template "fullname" . }}-phpfpm
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: '{{ .Values.image.repository }}:{{ .Values.image.tag }}'
+        imagePullPolicy: {{  default "" .Values.image.pullPolicy | quote }}
         ports:
         - containerPort: {{ .Values.ports.php }}
         resources:
