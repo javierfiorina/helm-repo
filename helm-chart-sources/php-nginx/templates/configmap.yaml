@@ -9,15 +9,17 @@ metadata:
     heritage: "{{ .Release.Service }}"
 data:
   nginx.conf: |-
-    server {
-      listen 0.0.0.0:{{ .Values.ports.nginx }};
-      root /app;
-      location / {
-        index index.html index.php;
-      }
-      location ~ \.php$ {
-        fastcgi_pass 127.0.0.1:9000;
-        fastcgi_index index.php;
-        include fastcgi.conf;
+    http {
+      server {
+        listen 0.0.0.0:{{ .Values.ports.nginx }};
+        root /app;
+        location / {
+          index index.html index.php;
+        }
+        location ~ \.php$ {
+          fastcgi_pass 127.0.0.1:9000;
+          fastcgi_index index.php;
+          include fastcgi.conf;
+        }
       }
     }

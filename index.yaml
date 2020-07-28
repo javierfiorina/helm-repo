@@ -2,9 +2,9 @@ apiVersion: v1
 entries:
   php-nginx:
   - apiVersion: v2
-    created: "2020-07-28T14:13:51.156119-03:00"
+    created: "2020-07-28T14:43:25.822752-03:00"
     description: A Helm chart for Kubernetes
-    digest: aa5785cbf8374b1c428bd0cbec0987bd76996ef6020061ffdf8d3c59b8fa7cd3
+    digest: 16ff8fa5e83610a6ff51299c6fa06a92af3439f204cfb5ab2e4df34cfa10735c
     name: php-nginx
     type: application
     urls:
@@ -12,7 +12,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-28T14:13:51.155818-03:00"
+    created: "2020-07-28T14:43:25.822227-03:00"
     description: A Helm chart for Kubernetes
     digest: 0ed580c0f67aaa602baa527ee243230de6fb2dd38e00d6ce005e3a631982344f
     name: php-nginx
@@ -20,4 +20,4 @@ entries:
     urls:
     - https://javierfiorina.github.io/helm-repo/php-nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2020-07-28T14:13:51.154117-03:00"
+generated: "2020-07-28T14:43:25.819337-03:00"
