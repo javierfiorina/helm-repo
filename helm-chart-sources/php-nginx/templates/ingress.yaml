@@ -1,5 +1,4 @@
 {{- if .Values.ingress.enabled -}}
-{{- $serviceName := {{ .Values.service.name }} -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -21,7 +20,7 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: {{ $serviceName }}
+              serviceName: {{ template "fullname" . }}
               servicePort: 80
     {{- end -}}
   {{- if .Values.ingress.tls.enabled }}
@@ -32,3 +31,4 @@ spec:
       {{- end -}}
       secretName: {{ template "fullname" . }}-tls
    {{- end -}}
+{{- end -}}

@@ -36,18 +36,18 @@ spec:
         image: '{{ .Values.image.nginx.repository }}:{{ .Values.image.nginx.tag }}'
         imagePullPolicy: {{ default "" .Values.image.pullPolicy | quote }}
         ports:
-        - name: http
-          containerPort: 8080
-        - name: https
-          containerPort: 8443
+          - name: http
+            containerPort: 8080
+          - name: https
+            containerPort: 8443
         livenessProbe:
-            tcpSocket:
-              port: 8080
+          tcpSocket:
+            port: 8080
           initialDelaySeconds: 10
           timeoutSeconds: 5
         readinessProbe:
-            tcpSocket:
-              port: 8080
+          tcpSocket:
+            port: 8080
           initialDelaySeconds: 10
           timeoutSeconds: 5
         volumeMounts:
