@@ -8,18 +8,12 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
-  nginx.conf: |-
-    http {
-      server {
-        listen 0.0.0.0:{{ .Values.ports.nginx }};
-        root /app;
-        location / {
-          index index.html index.php;
-        }
-        location ~ \.php$ {
-          fastcgi_pass 127.0.0.1:9000;
-          fastcgi_index index.php;
-          include fastcgi.conf;
-        }
+  default.conf: |-
+    server {
+      listen 8080;
+      location / {
+            fastcgi_pass 127.0.0.1:{{ .Values.ports.php }};
+            include fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME /usr/src/app/public/index.php;
       }
     }
